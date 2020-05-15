@@ -20,20 +20,21 @@ public class Snail extends Animal {
 
     }
 
-    
+
     private void crawl() {
         if (collideWithTank()==Collision.LEFT || collideWithTank()==Collision.RIGHT) {
             reverse();
-        }
-        Random rmd = new Random();
-        double randomNumber = rmd.nextDouble();
-        if (randomNumber<getThresholdReverse()) {
-            reverse();
-        }
-        if (isFacingRight()) {
-            moveRight();
-        } else{
-            moveLeft();
+        } else {
+            Random rmd = new Random();
+            double randomNumber = rmd.nextDouble();
+            if (randomNumber<getThresholdReverse()) {
+                reverse();
+            }
+            if (isFacingRight()) {
+                moveRight();
+            } else{
+                moveLeft();
+            }
         }
     }
 

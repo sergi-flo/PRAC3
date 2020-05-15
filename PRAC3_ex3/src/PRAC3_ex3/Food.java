@@ -3,7 +3,7 @@ package PRAC3_ex3;
 public class Food extends Item implements Movable{
 
     private double speed;
-    private boolean eaten;
+    private boolean eaten = false;
     private int energy;
 
     public Food (double xCoord, double yCoord, double length, double height, int energy, Tank tank, String spriteImage) throws AnimalException, ItemException, MovableException, Exception{
