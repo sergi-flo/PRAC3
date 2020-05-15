@@ -2,32 +2,32 @@ package PRAC3_ex3;
 
 public abstract class Animal extends Item implements Movable {
 
-    private AnimalGender gender;
+    private Gender gender;
     private int age;
     private boolean facingRight;
     private double speed;
-    private double requieredFoodQuantity;
+    private double requiredFoodQuantity;
     private double thresholdReverse;
     private int energy;
     private AnimalStatus status;
 
 
-    protected Animal (double xCoord, double yCoord, String spriteImage, double length, double height, AnimalGender gender, int age, double speed, double requieredFoodQuantity, double thresholdReverse, int energy, Tank tank) throws AnimalException, ItemException, MovableException, Exception{
+    protected Animal (double xCoord, double yCoord, String spriteImage, double length, double height, Gender gender, int age, double speed, double requiredFoodQuantity, double thresholdReverse, int energy, Tank tank) throws AnimalException, ItemException, MovableException, Exception{
         super(xCoord, yCoord, spriteImage, length, height, tank);
         setGender(gender);
         setAge(age);
         setFacingRight(true);
         setSpeed(speed);
-        setRequiredFoodQuantaty(requieredFoodQuantity);
+        setRequiredFoodQuantaty(requiredFoodQuantity);
         setThresholdReverse(thresholdReverse);
         setEnergy(100);
     }
 
-    public void setGender (AnimalGender gender){
+    public void setGender (Gender gender){
         this.gender = gender;
     }
 
-    public AnimalGender getGender() {
+    public Gender getGender() {
         return gender;
     }
 
@@ -61,12 +61,12 @@ public abstract class Animal extends Item implements Movable {
         return this.speed;
     }
 
-    public void setRequiredFoodQuantaty (double requieredFoodQuantity) {
-        this.requieredFoodQuantity = requieredFoodQuantity;
+    public void setRequiredFoodQuantaty (double requiredFoodQuantity) {
+        this.requiredFoodQuantity = requiredFoodQuantity;
     }
 
     public double getRequiredFoodQuantity () {
-        return this.requieredFoodQuantity;
+        return this.requiredFoodQuantity;
     }
 
     public void setThresholdReverse (double thresholdReverse) throws MovableException {

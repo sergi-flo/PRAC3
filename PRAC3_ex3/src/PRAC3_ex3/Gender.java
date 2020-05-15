@@ -1,6 +1,6 @@
 package PRAC3_ex3;
 
-public enum AnimalGender {
+public enum Gender {
 	FEMALE, 
 	MALE;
 }
