@@ -168,7 +168,7 @@ public class Item {
 		str.append(getId() + " ");
 		//str.append(getEnergy() + " ");
 		//str.append(getStatus() + " ");
-		str.append(getLength() + "");
+		str.append(getLength() + " ");
 		str.append(getHeight() + " ");
 		str.append((getTank()!=null)?getTank().getName():"No tank");
 		return str.toString();
