@@ -10,6 +10,17 @@ public class Snail extends Animal {
         super(xCoord, TANK_PANE_HEIGHT, "./images/snail/snail.png", length, height, gender, age, 0.01, 0.1, 0.00000003, energy, tank);
     }
 
+    @Override
+    public void moveUp(){
+
+    }
+    
+    @Override
+    public void moveDown(){
+
+    }
+
+    
     private void crawl() {
         if (collideWithTank()==Collision.LEFT || collideWithTank()==Collision.RIGHT) {
             reverse();
@@ -40,5 +51,5 @@ public class Snail extends Animal {
         //TODO
     }
 
-    
+
 }
