@@ -110,9 +110,9 @@ public abstract class Animal extends Item implements Movable {
 		}
 	}
 	
-	public void incEnergy(int energy) throws Exception{
+	public void incEnergy(int energy) throws AnimalException{
 		try{
-			if(energy<0) throw new Exception("[ERROR] Incorrect value!!"); //Este error no estaba especificado en el enunciado y no hacia falta codificarlo/controlarlo
+			if(energy<0) throw new AnimalException("[ERROR] Incorrect value!!"); //Este error no estaba especificado en el enunciado y no hacia falta codificarlo/controlarlo
 			setEnergy(getEnergy()+energy);
 		}catch(Exception e) {
 			try{
@@ -122,9 +122,9 @@ public abstract class Animal extends Item implements Movable {
 		}
 	}
 	
-	public void decEnergy(int energy) throws Exception{
+	public void decEnergy(int energy) throws AnimalException{
 		try{
-			if(energy<0) throw new Exception("[ERROR] Incorrect value!!"); //Este error no estaba especificado en el enunciado y no hacia falta codificarlo/controlarlo
+			if(energy<0) throw new AnimalException("[ERROR] Incorrect value!!"); //Este error no estaba especificado en el enunciado y no hacia falta codificarlo/controlarlo
 			setEnergy(getEnergy()-energy);
 		}catch(Exception e) {
 			try{
@@ -177,7 +177,7 @@ public abstract class Animal extends Item implements Movable {
 
     public abstract void breathe();
 
-    public void eat() throws Exception{
+    public void eat() throws AnimalException{
         if (!isDead()) {
             for (Item item : getTank().getFood()){
                 if(

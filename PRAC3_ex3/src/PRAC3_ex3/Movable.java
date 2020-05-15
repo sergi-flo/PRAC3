@@ -15,7 +15,7 @@ public interface Movable{
 
     public Collision collideWithTank();
 
-    public void update();
+    public void update() throws AnimalException;
 
     public void setSpeed(double speed) throws MovableException;
 
